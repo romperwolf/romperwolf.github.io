@@ -6,7 +6,7 @@ document.getElementById("wynik").innerHTML = "-";
 //document.getElementById("przegrana").style.color = "red";//
 //document.getElementById("wygrana").innerHTML = "X 20:00";
 //document.getElementById("wygrana").style.color = "green";
-alert("Działa");
     }
 
     window.onload=mys;
+
