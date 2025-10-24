@@ -7,6 +7,6 @@ document.getElementById("wynik").innerHTML = "-";
 //document.getElementById("wygrana").innerHTML = "X 20:00";
 //document.getElementById("wygrana").style.color = "green";
     }
-
     window.onload=mys;
+
 
