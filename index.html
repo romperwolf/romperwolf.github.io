@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
@@ -7,54 +8,77 @@
     </html>
 </head>
 <body>
-<script src="config.js"></script>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
 
-    <style>
-        button{
-            background-color: rgb(14, 36, 1);
-            color: gold;
-            font-size: 24px;
-            border-color: gold;
-            font-family: arial black;
-            border: solid;
-        }
-        p,h1{
-            font-family: Calibri;
-        }
-        span{
-            color: white
-        }
+h2, p {
+  margin: 10px;
+}
 
-        body{
-            background-color: rgb(4, 54, 4);
-        }
-    </style>
-    <span style="background-color: red; color:white; font-size:24px; font-family: consolas;">STRONA NIE JEST JESZCZE UKOŃCZONA PRACE NAD STRONĄ CIĄGLE TRWAJĄ </span><span onclick="window.open('redinfo.html')">Dowiedz się więcej
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0a3501;
+}
 
-    </span>
-    <center>
-        <img src="logo.png" alt="Logo KSZ Romper Wolf" style="border-radius:50%; border:solid 10px; black;">
-    </center>
-    <div>
-        <center><img src=""></center>
-        &nbsp;
-        <div class="brt">
-        <p><button>Strona Główna</button> <button onclick="window.open('Opis.html')">Opis</button> <button onclick="window.open('zawodnicy.html')">Skład/Lista Zawodników</button> <button onclick="window.open('mecze.html')">Historia Meczów/Drużyny</button> <button>Wiadomośći</button> <button>Socjalmedia</button> <button onclick="window.open('zxc.html')">Kontakt/Współpraca</button> <button onclick="alert('Ta strona nie jest jeszcze gotowa zapraszamy puźniej')">Zdjęcia/Archiwum</button><button onclick="window.open('livetv.html');">Transmisja na żywo📹</button></p>
-        </div>
-        <div style="background-color: rgb(10, 46, 10); font-size:18px; width: 100%;">
-            <font color="gold">
-<p>Najbliższy mecz:&nbsp;<span id="matchinfo"></span></p>
-<p>Miejsce/Godzina:&nbsp;<span id="god"></span></p>
-<p>Status/Wynik:&nbsp;<span id="wynik"></span><span id="przegrana"></span><span id="wygrana"></span></p>
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #041500;
+  color: gold;
+}
+</style>
+</head>
+<body>
+
+<ul>
+    <li><img src="https://romperwolf.github.io/ikonka.ico" style="width:100px; height: 100px; border-radius: 50%; border:solid rgb(255, 255, 255) 5px;"></li>
+  <li><a href="index.html">Strona Główna</a></li>
+  <li><a href="Opis.html">Opis</a></li>
+  <li><a href="zawodnicy.html">Lista Zawodników</a></li>
+  <li><a href="mecze.html">Historia Meczów</a></li>
+   <li><a href="zxc.html">Wiadomości</a></li>
+    <li><a href="zxc.html">Socjalmedia</a></li>
+     <li><a href="zxc.html">Kontakt</a></li>
+      <li><a href="zxc.html">Zdjęcia</a></li>
+       <li><a href="zxc.html">Archiwum</a></li>
+        <li><a href="livetv.html">Transmisja na żywo</a></li>
+         <li><a href="zxc.html">Współpraca</a></li>
+</ul>
+<center>
+<div style="background-color: rgb(10, 46, 10); font-size:18px; width: 50%; fl">
+            <font color="gold" face="Arial">
+<p>Najbliższy mecz:&nbsp;<span id="matchinfo">KSZ Romper Wolf - Olimpia Kleczanów</span></p>
+<p>Miejsce/Godzina:&nbsp;<span id="god">Sobota 15:00 Orlik: Jedynka</span></p>
+<p>Status/Wynik:&nbsp;<span id="wynik">15:15</span><span id="przegrana"></span><span id="wygrana" style="color: white;">REMIS</span></p>
+<p><span style="background-color: gray; border: solid 2px rgb(0, 0, 0);">Oglądaj na żywo▶️</span> <span style="background-color: gray;  border: solid 2px rgb(0, 0, 0)">Więcej informacji</span></p>
 </font>
+</center>
+<center>
+<div style="background-color: rgb(10, 46, 10); font-size:18px; width: 50%; fl">
+            <font color="gold" face="Arial">
+              <h1>Najnowsze informacja</h1>
+             <!-- <p style="color:red;">Brak najnowszych informacji</p>-->
+              &nbsp;
+            </font>
+</center>
         </div>
-<p><h1>Najnowsza Informacja 24.09.25</h1></p>
-<p>Poszukujemy nowych zawodników jeśli chcesz się przyłączyć napisz do nas na Instagram bądź na email <a href="mailto:kszromperwolf@gmail.com">Email - Kliknij by zobaczyć email</a></p>
-    </div>
-
+        <script src="https://romperwolf.github.io/config.js"></script>
 </body>
-
-
-
-
-
+</html>
