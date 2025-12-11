@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+</html>
+<center>
+    <p id="wyj"></p>
+    <div class="forms" style="border:solid 1px;">
+    <p><h1>Formularz Kandydata na zawodnika Romper Wolf</h1></p>
+    <p id="wys"></p>
+    <p>Imię i Nazwisko:&nbsp;<input></p>
+    <p>Pozycja:&nbsp;<input></p>
+    <p>Data urodzenia:&nbsp;<input type="date">&nbsp;Wiek:<input type="number" style="width:30px;"></p>
+<p>Oświadczam że zapoznałem się z regulaminem i polityką klubu&nbsp;<input type="checkbox" onclick="erg()" id="tyv"><span id="dfg"></span></p>
+<p id="printes"></p>
+<p id="info"></p>
+<script>
+    function printus(){
+          document.getElementById("info").innerHTML="";
+          document.getElementById("wyj").innerHTML="";
+        document.getElementById("printes").innerHTML="";
+        window.print();
+         document.getElementById("info").innerHTML="";
+         document.getElementById("info").innerHTML="<a href='forms.html'>Restartuj formularz</a>";
+    }
+    function erg(){
+        if(document.getElementById("tyv").checked){
+            document.getElementById("dfg").innerHTML=" - Zaznaczone";
+            document.getElementById("printes").innerHTML='<button onclick="printus()">Drukuj formularz</button>';
+             document.getElementById("info").innerHTML="Lub zrób zrzut ekranu formularza i wyślij go na adres e-mail klubu.<button onclick='topik()'>ukryj informacje</button>";
+        }
+        else{
+            document.getElementById("dfg").innerHTML="";
+            document.getElementById("printes").innerHTML="";
+            document.getElementById("info").innerHTML="";
+        }
+    }
+    function topik(){
+        document.getElementById("info").innerHTML="";
+    }
+    document.getElementById("wys").innerHTML="Formularz na dzień: " + new Date().toLocaleDateString();
+    document.getElementById("wyj").innerHTML="<p><button onclick='graf()'>Formularz do druku(graficzny)</button><button onclick='regul()'>Regulamin i polityka klubu</button><button onclick='secur()'>Kontrakt wzór</button><button onclick='home()'>Strona Główna</button></p>";
+    function graf(){
+        window.location.href="formgraf.html";
+    }   
+    function regul(){
+        window.location.href="https://romperwolf.github.io/Regulami-i-Polityka-KSZ-Romper-Wolf.pdf";
+    }
+    function secur(){
+        window.location.href="kontrakt.html";
+    }
+    function home(){
+        window.location.href="index.html";
+    }
+</script>
+<style>
+       button{
+            background-color: aliceblue;
+            color:rgb(1, 53, 1);
+            font-size: 24px;
+            border: solid 1px;;
+        }
+</style>
+</div>
+</center>
