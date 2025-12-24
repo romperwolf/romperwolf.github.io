@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0029)https://romperwolf.github.io/ -->
 <html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    
         <title>KSZ Romper Wolf</title>
         <link rel="shortcut icon" href="ikonka1.ico">
         <link rel="stylesheet" href="mouse.css">
@@ -75,6 +73,7 @@ ul li a:hover {
 </ul>
 <center>
 <div style="background-color: rgb(10, 46, 10); font-size:18px; width: 50%; fl">
+	<div><span id="clock"></span></div>
             <font color="gold" face="Arial">
 				<p>Najbliższy mecz:&nbsp;<span id="matchinfo"><span style="color:white;"></span></span></p>
 <p>Miejsce/Godzina:&nbsp;<span id="god"><span style="color:white">
@@ -106,8 +105,26 @@ ul li a:hover {
 </div></center>
         
         <script src="config.js"></script>
+		<script>
+			        function updateClock() {
+            const now = new Date(); // Pobiera bieżącą datę i godzinę
+            const hours = now.getHours().toString().padStart(2, '0'); // Godziny
+            const minutes = now.getMinutes().toString().padStart(2, '0'); // Minuty
+            const seconds = now.getSeconds().toString().padStart(2, '0'); // Sekundy
+
+            // Ustawia czas w formacie HH:MM:SS
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Uaktualnia zegar co sekundę
+        setInterval(updateClock, 1000);
+
+        // Inicjalizuje zegar natychmiastowo
+        updateClock();
+		</script>
 </body>
 </html>
+
 
 
 
