@@ -13,9 +13,11 @@
 body {
   margin: 0;
   padding: 0;
+background-image: url('https://www.tapeciarnia.pl/tapety/normalne/262742_pilka_nozna_stadion_zawodnik.jpg');
  background-repeat: no-repeat;         /* wyłącza powtarzanie */
     background-position: center;          /* ustawia w środku */
     background-size: cover;               /* dopasowuje do całego ekranu */
+background-color: rgb(0, 0, 0);
 }
 
 h2, p {
@@ -27,7 +29,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #0a3501;
+  background-color: #0a3501c7;
+  border: solid 2px rgba(0, 128, 0, 0.151);
 }
 
 ul li {
@@ -46,6 +49,9 @@ ul li a {
 ul li a:hover {
   background-color: #041500;
   color: gold;
+}
+div{
+  border:
 }
 </style>
 
@@ -76,8 +82,9 @@ ul li a:hover {
 		<div>&nbsp;</div>
 		<div>&nbsp;</div>
 <center>
-<div style="background-color: rgb(10, 46, 10); font-size:18px; width: 50%; fl">
-	<div><span id="clock">22:37:12</span></div>
+  <div>
+<div style="background-color: rgba(10, 46, 10, 0.842); font-size:18px; width: 50%;">
+	<div><span id="clock" style="font-family: arial; color: white;">22:37:12</span></div>
             <font color="gold" face="Arial">
 				<p>Najbliższy mecz:&nbsp;<span id="matchinfo">Brak</span></p>
 <p>Miejsce/Godzina:&nbsp;<span id="god">Brak</span></p>
@@ -86,7 +93,7 @@ ul li a:hover {
 </font>
 </div></center>
 	<center>
-	<div style="background-color: rgb(10, 46, 10); font-size:18px; width: 50%; fl">
+	<div style="background-color: rgb(10, 46, 10, 0.842); font-size:18px; width: 50%; fl">
             <font color="gold" face="Arial">
 				<p>Ostatni mecz:&nbsp;<span id="matchinfo"><span style="color: white;">KSZ Romper Wolf : Olimpia Kleczanów</span></span></p>
 <p>Miejsce/Godzina:&nbsp;<span id="god"><span style="color:white;">"Orlik Jedynka"</span></span></p>
@@ -95,7 +102,7 @@ ul li a:hover {
 </font>
 </div></center>
 	<center>
-<div style="background-color: rgb(10, 46, 10); font-size:18px; width: 50%; fl">
+<div style="background-color: rgb(10, 46, 10, 0.842); font-size:18px; width: 50%; fl">
             <font color="gold" face="Arial">
               <h1>Najnowsze informacja</h1>
              <!-- <p style="color:red;">Brak najnowszych informacji</p>-->
@@ -112,7 +119,7 @@ ul li a:hover {
               &nbsp;
             </font>
 </div></center>
-        
+</div>
         <script src="./KSZ Romper Wolf_files/config.js.pobierz"></script>
 		<script>
 			        function updateClock() {
@@ -131,8 +138,6 @@ ul li a:hover {
         // Inicjalizuje zegar natychmiastowo
         updateClock();
 		</script>
-
-
 
 
 
