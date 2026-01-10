@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
+    background-color: rgba(4, 56, 17, 0.397);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  background-color: rgba(4, 56, 17, 0);
+  gap: 10px;  
+}
+.header {
+  grid-area: header;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  background-color:rgba(4, 56, 17, 0.397);
+  }
+  
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(4, 56, 17, 0.397);;
+}
+.menu ul:hover {
+  background-color: rgba(1, 15, 2, 0.397);  
+}
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #154b04;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  color: gold;
+}
+  
+.content {
+  grid-area: main;
+}
+
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.content > p {
+  margin-bottom: 7px;
+}
+
+.facts {
+  grid-area: facts;
+  border: 1px solid #044116;
+  padding: 10px;
+}
+
+.facts > h2 {
+  font-size: 20px;
+}
+
+.facts li {
+  margin-bottom: 5px;
+}
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ p,h1{
+            font-family: Calibri;
+            color: white;
+        }
+        button{background-color: rgb(3, 54, 29); border: solid; color: white; padding: 10px;}
+</style>
+</head>
+<body>
+<p><h1><center><span style="background-color: rgb(3, 54, 29); color:white;">Romper<span  style="background-color: rgb(94, 99, 75); color:white;">TV</span></center></h1></p>
+<div class="grid-container">
+<div class="menu">
+    <p><a href="https://romperwolf.github.io/index.html"><BUTTON>Powrót do menu</BUTTON></a></p>
+  <ul>
+<li>
+    <CENTER><iframe src="https://romperwolf.github.io/zxc.html"></iframe></CENTER>
+</li>
+<LI>
+<p><a href=""><button>Archiwalne mecze</button>&nbsp;<span id="matchedtv"></span></a></p>
+</LI>
+  </ul>
+</div>
+</span>
+</div>
+</div>
+</body>
+</html>
