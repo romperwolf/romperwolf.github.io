@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
+    background-color: rgba(4, 56, 17, 0.397);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  background-color: rgba(4, 56, 17, 0);
+  gap: 10px;  
+}
+.header {
+  grid-area: header;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  background-color:rgba(4, 56, 17, 0.397);
+  }
+  
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(4, 56, 17, 0.397);;
+}
+.menu ul:hover {
+  background-color: rgba(1, 15, 2, 0.397);  
+}
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #154b04;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #010f02;
+  color: gold;
+}
+  
+.content {
+  grid-area: main;
+}
+
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.content > p {
+  margin-bottom: 7px;
+}
+
+.facts {
+  grid-area: facts;
+  border: 1px solid #044116;
+  background-color: rgba(4, 56, 17, 0.397);
+  padding: 10px;
+}
+
+.facts > h2 {
+  font-size: 20px;
+}
+
+.facts li {
+  margin-bottom: 5px;
+}
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+
+<div class="header"><img src="https://romperwolf.github.io/576139981_17853404073571775_2950916125116946901_n-removebg-preview%20(2).png" width="200"></div>
+<div class="menu">
+  <ul>
+    <li><a href="https://romperwolf.github.io/match_info_app.html">Najbliższe Mecze⚽</a></li>
+    <li><a href="https://romperwolf.github.io/livetv.html">Transmisja na żywo📹</a></li>
+    <li><a href="https://romperwolf.github.io/zxc.html">Filmy▶️</a></li>
+    <li><a href="https://romperwolf.github.io/liga.html">Liga🏆</a></li>
+    <LI><a href="https://romperwolf.github.io/zxc.html">Sklep🛒</a></LI>
+    <li><a href="https://romperwolf.github.io/">Strona WWW🌍</a></li>
+    <code style="color:white;">Opcje mogą nie działać poprawnie</code>
+  </ul>
+</div>
+<span style="background-color: rgb(245, 238, 144);">
+<p><u>Aplikacja jest w fazie BETA mogą występować błędy</u></p>
+<P style="color:red;">Faza beta to ostatnia etap w cyklu życia oprogramowania, w którym produkt jest testowany przez grupę użytkowników końcowych, aby zbierać opinie i poprawki.</P>
+<p>W razie problemów napisz pod adres 
+    <br>
+    e-mail: kszromperwolf.github.io
+</p>
+</span>
+</div>
+</div>
+</body>
+</html>
