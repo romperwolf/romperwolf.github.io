@@ -115,9 +115,21 @@ a{
     <LI><a href="https://romperwolf.github.io/info.html">Wiadomości📰</a></LI>
     <li><a href="https://romperwolf.github.io/">Strona WWW🌍</a></li>
     <li><a href="https://romperwolf.github.io/mecze.html">Historia meczów</a></li>
+    <li><input type="text" id="komenda" placeholder="Wpisz komendę"><button onclick="sprawdzKomende()">Kliknij</button></li>
     <code style="color:white;">Opcje mogą nie działać poprawnie</code>
   </ul>
 </div>
+  <script>
+function sprawdzKomende() {
+    const wartosc = document.getElementById("komenda").value;
+
+    if (wartosc === "reset.info") {
+        alert("23");
+    } else {
+        alert("To jest konsola ułatwiająca rozwój aplikacji w wersji BETA dla programisty nie używaj jeśli nie jesteś nim");
+    }
+}
+</script>
 <span style="background-color: rgb(245, 238, 144);">
 <p><u>Aplikacja jest w fazie BETA mogą występować błędy</u></p>
 <P style="color:red;">Faza beta to ostatnia etap w cyklu życia oprogramowania, w którym produkt jest testowany przez grupę użytkowników końcowych, aby zbierać opinie i poprawki.</P>
@@ -130,6 +142,7 @@ a{
 </div>
 </body>
 </html>
+
 
 
 
