@@ -1,10 +1,11 @@
-document.getElementById("matchinfos").innerText = "";
-document.getElementById("matchinfos2").innerText = "";
-document.getElementById("matchinfos3").innerText = "";
-document.getElementById("matchinfos4").innerText = "";
+document.getElementById("matchinfos").innerText = "Zawisza Garbów";
+document.getElementById("matchinfos2").innerText = "12.01.2026";
+document.getElementById("matchinfos3").innerText = "19:00";
+document.getElementById("matchinfos4").innerText = "Orlik Jedynka";
 document.getElementById("errorsinfo").style.display = "block";
-document.getElementById("errorsinfo").style.display = "";
+document.getElementById("errorsinfo").innerText = "";
 //errorcode//
 document.getElementById("errorcode").style.display = "block";
 document.getElementById("errorcode").innerText = "";
+
 
