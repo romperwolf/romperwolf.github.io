@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>KSZ Romper Wol - Jumb</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #70c5ce;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#bird {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 30%;
+    top: 40%;
+}
+
+.pipe {
+    position: absolute;
+    width: 60px;
+    background: #2ecc71;
+}
+
+.pipe.top {
+    top: 0;
+}
+
+.pipe.bottom {
+    bottom: 0;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+#gameover {
+    display: none;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+</style>
+</head>
+<body>
+
+<div id="game">
+    <div id="score">0</div>
+    <div id="gameover">Koniec Gry!<br><small>Tapnij aby zagrać ponownie</small></div>
+    <img id="bird" src="https://romperwolf.github.io/576139981_17853404073571775_2950916125116946901_n-removebg-preview%20(2).png">
+</div>
+
+<script>
+const bird = document.getElementById("bird");
+const game = document.getElementById("game");
+const scoreEl = document.getElementById("score");
+const gameOverEl = document.getElementById("gameover");
+
+let birdY = window.innerHeight * 0.4;
+let velocity = 0;
+let gravity = 0.6;
+let jump = -10;
+let pipes = [];
+let score = 0;
+let gameOver = false;
+
+function createPipe() {
+    const gap = 160;
+    const pipeTopHeight = Math.random() * (window.innerHeight - gap - 200) + 50;
+
+    const topPipe = document.createElement("div");
+    topPipe.classList.add("pipe", "top");
+    topPipe.style.height = pipeTopHeight + "px";
+    topPipe.style.left = window.innerWidth + "px";
+
+    const bottomPipe = document.createElement("div");
+    bottomPipe.classList.add("pipe", "bottom");
+    bottomPipe.style.height = (window.innerHeight - pipeTopHeight - gap) + "px";
+    bottomPipe.style.left = window.innerWidth + "px";
+
+    game.appendChild(topPipe);
+    game.appendChild(bottomPipe);
+
+    pipes.push({ topPipe, bottomPipe, passed: false });
+}
+
+function resetGame() {
+    pipes.forEach(p => {
+        p.topPipe.remove();
+        p.bottomPipe.remove();
+    });
+    pipes = [];
+    birdY = window.innerHeight * 0.4;
+    velocity = 0;
+    score = 0;
+    scoreEl.textContent = score;
+    gameOver = false;
+    gameOverEl.style.display = "none";
+}
+
+function update() {
+    if (gameOver) return;
+
+    velocity += gravity;
+    birdY += velocity;
+    bird.style.top = birdY + "px";
+
+    if (birdY < 0 || birdY + bird.offsetHeight > window.innerHeight) {
+        endGame();
+    }
+
+    pipes.forEach(p => {
+        const left = parseFloat(p.topPipe.style.left);
+        p.topPipe.style.left = (left - 3) + "px";
+        p.bottomPipe.style.left = (left - 3) + "px";
+
+        if (!p.passed && left < window.innerWidth * 0.3) {
+            score++;
+            scoreEl.textContent = score;
+            p.passed = true;
+        }
+
+        if (checkCollision(p.topPipe) || checkCollision(p.bottomPipe)) {
+            endGame();
+        }
+
+        if (left < -60) {
+            p.topPipe.remove();
+            p.bottomPipe.remove();
+        }
+    });
+
+    pipes = pipes.filter(p => parseFloat(p.topPipe.style.left) > -60);
+}
+
+function checkCollision(pipe) {
+    const b = bird.getBoundingClientRect();
+    const p = pipe.getBoundingClientRect();
+
+    return !(
+        b.right < p.left ||
+        b.left > p.right ||
+        b.bottom < p.top ||
+        b.top > p.bottom
+    );
+}
+
+function endGame() {
+    gameOver = true;
+    gameOverEl.style.display = "block";
+}
+
+function flap() {
+    if (gameOver) {
+        resetGame();
+    }
+    velocity = jump;
+}
+
+document.addEventListener("keydown", e => {
+    if (e.code === "Space") flap();
+});
+
+document.addEventListener("touchstart", flap);
+
+setInterval(createPipe, 1500);
+setInterval(update, 20);
+</script>
+
+</body>
+</html>
