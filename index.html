@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <!-- saved from url=(0029)https://romperwolf.github.io/ -->
 <html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KSZ Romper Wolf</title>
         <link rel="shortcut icon" href="https://romperwolf.github.io/ikonka1.ico">
         <link rel="stylesheet" href="./KSZ Romper Wolf_files/mouse.css">
@@ -41,13 +43,66 @@ ul li a {
   color: white;
   text-align: center;
   font-family: Arial;
-  padding: 14px 16px;
+  padding: 12px 11px;
   text-decoration: none;
+  font-size: 20px;
 }
 
 ul li a:hover {
   background-color: #041500;
   color: gold;
+}
+
+@media (max-width: 768px) {
+  ul li {
+    float: none;
+    width: 100%;
+  }
+  
+  ul li a {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+  
+  ul li img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  div[style*="width: 50%"] {
+    width: 90% !important;
+  }
+  
+  h2, p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    padding: 5px 0;
+  }
+  
+  ul li a {
+    padding: 8px 4px;
+    font-size: 21px; /*telefon*/
+  }
+  
+  ul li img {
+    width: 50px !important;
+    height: 50px !important;
+    border-width: 2px !important;
+  }
+  
+  div[style*="width: 50%"] {
+    width: 95% !important;
+    font-size: 16px !important;
+  }
+  
+  h2, p {
+    font-size: 12px;
+    margin: 5px;
+  }
 }
 div{
   border:
@@ -138,16 +193,6 @@ div{
         // Inicjalizuje zegar natychmiastowo
         updateClock();
 		</script>
-
-
-
-
-
-
-
-
-
-
 
 
 
